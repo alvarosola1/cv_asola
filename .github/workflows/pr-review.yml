@@ -1,4 +1,7 @@
 name: 'Revisión de PR con IA'
+permissions:
+  pull-requests: write
+  issues: write
 
 on:
   pull_request:
