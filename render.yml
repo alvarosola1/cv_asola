@@ -1,0 +1,17 @@
+# Archivo de configuración para Render (render.yaml)
+# Define un servicio de tipo "Static Site"
+
+services:
+  # Nombre del servicio. Puedes cambiarlo si quieres.
+  - name: cv-alvaro-sola
+    type: static
+    # Rama de GitHub que se desplegará automáticamente
+    branch: main
+    # Directorio a publicar. '.' significa la raíz del repositorio.
+    publishDir: .
+    # Opcional: Reescribe todas las rutas a index.html, útil para SPAs.
+    # En tu caso, como es una sola página, es una buena práctica tenerlo.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

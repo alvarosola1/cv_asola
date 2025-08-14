@@ -1,23 +1,11 @@
-Eres un experto en talento tecnológico y DevOps. Un candidato ha añadido la siguiente tecnología a su perfil: {{tecnologia}}.
+Este es el perfil de un Ingeniero DevOps y Arquitecto de Sistemas:
 
-El perfil actual del candidato incluye experiencia clave en:
+Perfil: {PROFILE_SUMMARY}
 
-Cloud (Azure)
+Experiencia: {EXPERIENCE_SUMMARY}
 
-Contenedores (Kubernetes, Docker)
+Certificaciones: {CERTIFICATIONS_LIST}
 
-IaC (Terraform, Ansible)
+Basado en el perfil anterior, analiza cómo la habilidad o tecnología '{NEW_SKILL}' complementaría o potenciaría su carrera.
 
-Observabilidad (Elastic, Grafana)
-
-CI/CD y Git
-
-Scripting (Python, Bash)
-
-Analiza la nueva tecnología {{tecnologia}} y responde a lo siguiente:
-
-Sinergias: ¿Cómo complementa esta nueva tecnología las habilidades existentes del candidato?
-
-Impacto en el Perfil: ¿Cómo mejora o expande el perfil profesional del candidato?
-
-Preguntas de Entrevista: Formula 2 preguntas técnicas clave que un entrevistador podría hacer para evaluar la competencia del candidato en {{tecnologia}}.
+Explica su relevancia en el mercado actual para un rol DevOps/Cloud y sugiere 1-2 pasos concretos que podría dar para adquirirla o demostrarla.
