@@ -1,0 +1,16 @@
+{
+  "headerTitle": "Álvaro Sola Martínez",
+  "headerSubtitle": "Ingeniero DevOps & Arquitecto de Sistemas",
+  "downloadButton": "Descargar CV (PDF) 📄",
+  "personalDetailsTitle": "Datos Personales",
+  "phoneLabel": "Teléfono:",
+  "emailLabel": "Email:",
+  "locationLabel": "Ubicación:",
+  "educationTitle": "Formación y Certificaciones",
+  "experienceTitle": "Experiencia Profesional",
+  "experienceDescription": "Haz clic en un puesto en la línea de tiempo para ver los detalles y las funciones de IA disponibles.",
+  "contactTitle": "Contacto",
+  "contactInfo": "alvaro.sola.martinez@gmail.com | 649 807 281",
+  "githubSectionTitle": "¿Cómo está hecho esto?",
+  "githubSectionText": "Este CV es un proyecto vivo. Entra al repositorio, mira las tripas y descubre cómo funciona."
+}

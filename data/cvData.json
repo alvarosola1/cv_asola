@@ -1,0 +1,124 @@
+{
+  "profile": "Ingeniero DevOps y Arquitecto de Sistemas con más de 15 años de experiencia en la administración, automatización y optimización de infraestructuras TI complejas. Especializado en el diseño de soluciones de plataforma, observabilidad y automatización de procesos. Cuento con un sólido historial en la implementación y gestión de tecnologías de vanguardia como Kubernetes, Elastic Stack y soluciones Cloud en entornos de alta disponibilidad.",
+  "education": {
+    "title": "Técnico Superior en Administración de Sistemas Informáticos",
+    "institution": "Escuela Arte Granada",
+    "period": "2005 - 2007"
+  },
+  "certifications": [
+    "Elastic Certified Engineer (2023)",
+    "Red Hat Certified Engineer (RHCE) (2022)",
+    "Red Hat Certified System Administrator (RHCSA) (2021)",
+    "Certified Kubernetes Administrator (CKA) (2021)",
+    "Microsoft Certified: Azure Administrator Associate (2021)",
+    "Microsoft Certified: Azure Fundamentals (2020)",
+    "Red Hat Certified Specialist in Ansible Automation (2019)",
+    "ITIL Foundation Certificate in IT Service Management (2013)"
+  ],
+  "personal": {
+    "name": "Álvaro Sola Martínez",
+    "title": "Ingeniero DevOps y Arquitecto de Sistemas",
+    "phone": "649 807 281",
+    "email": "alvaro.sola.martinez@gmail.com",
+    "location": "Granada"
+  },
+  "jobs": [
+    {
+      "id": 1,
+      "role": "Demand Manager & Cloud Architect",
+      "company": "Knowmad Mood (para El Corte Inglés)",
+      "period": "Mar 2024 - Actualidad",
+      "technologies": ["Azure", "Terraform", "Ansible", "Grafana", "Elastic Stack", "GitHub Actions", "CI/CD", "FinOps"],
+      "description": [
+        "Diseño de soluciones de arquitectura cloud y on-premise para el equipo de plataforma, garantizando escalabilidad y alta disponibilidad.",
+        "Liderazgo en la implementación de automatizaciones con GitHub Actions, Terraform y Ansible (CI/CD).",
+        "Definición de políticas de seguridad y gobierno cloud usando Infrastructure as Code (IaC).",
+        "Gestión de la observabilidad de plataformas con Grafana y Elastic Stack para la monitorización proactiva.",
+        "Optimización de costes (FinOps) y análisis de consumo de recursos en Microsoft Azure."
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Especialista DevOps",
+      "company": "Datadope",
+      "period": "2022 - Mar 2024",
+      "technologies": ["Elastic Stack", "Python", "Kubernetes", "Docker", "Grafana", "Prometheus", "Git", "Machine Learning"],
+      "description": [
+        "Especializado en Observabilidad con Elastic Stack (Elasticsearch, Beats, Kibana, Logstash).",
+        "Creación de pipelines de ingesta de datos con Logstash y Beats para la normalización y enriquecimiento de logs.",
+        "Aplicación de técnicas de Machine Learning para la creación de paneles de detección de anomalías y forecasting.",
+        "Desarrollo de scripts de automatización en Python y Bash para la gestión del ciclo de vida de los datos.",
+        "Colaboración en el despliegue de modelos de Machine Learning en entornos productivos contenerizados."
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Ingeniero DevOps",
+      "company": "Inetum (para Viajes El Corte Inglés)",
+      "period": "2019 - 2022",
+      "technologies": ["Kubernetes", "Ansible", "Python", "Azure", "GlusterFS", "CephFS", "F5", "HAProxy", "Docker"],
+      "description": [
+        "Instalación, configuración y mantenimiento de clústeres de Kubernetes en entornos de producción.",
+        "Desarrollo de playbooks complejos de Ansible para el aprovisionamiento de infraestructura completa.",
+        "Automatización y desarrollo de nuevos módulos para Ansible en Python para extender su funcionalidad.",
+        "Gestión de infraestructuras cloud en Azure y vCloud, incluyendo redes, almacenamiento y computación.",
+        "Administración de soluciones de almacenamiento distribuido con GlusterFS y CephFS."
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Analista de Sistemas",
+      "company": "Mr Informática (para IMSERSO)",
+      "period": "2016 - 2019",
+      "technologies": ["Red Hat", "Linux", "Ansible", "Puppet", "OpenStack", "Docker", "Kubernetes", "VMware", "JBoss"],
+      "description": [
+        "Toma de requerimientos, planificación y ejecución de nuevos proyectos de infraestructura.",
+        "Administración de sistemas Red Hat y CentOS, y servidores de aplicaciones como JBoss y Tomcat.",
+        "Hardening de sistemas Linux y aplicación de parches de seguridad según normativas.",
+        "Automatización de tareas de configuración e instalación con Ansible y Puppet.",
+        "Contenerización de aplicaciones con Openshift (Docker, Kubernetes) en fases iniciales."
+      ]
+    },
+    {
+      "id": 5,
+      "role": "Administrador de Sistemas Linux",
+      "company": "IBM (para Gas Natural Fenosa)",
+      "period": "2012 - 2016",
+      "technologies": ["Linux", "Red Hat", "AIX", "HP-UX", "VMware", "Shell Scripting", "LVM", "NFS", "SAN"],
+      "description": [
+        "Administrador de sistemas de nivel 3 para el entorno productivo de Gas Natural Fenosa.",
+        "Virtualización con VMware ESX, vSphere, VioServer (AIX) y HMC.",
+        "Resolución de incidencias de rendimiento mediante tuning de sistema operativo y almacenamiento.",
+        "Ejecución de pruebas de Disaster Recovery y elaboración de documentación técnica.",
+        "Creación de scripts en Shell Scripting para la automatización de backups y monitorización."
+      ]
+    },
+    {
+      "id": 6,
+      "role": "Técnico de Soporte",
+      "company": "Telefónica I+D",
+      "period": "2009 - 2010",
+      "technologies": ["Soporte de Aplicaciones", "Testing", "Despliegue", "Mantenimiento", "SQL"],
+      "description": [
+        "Labores de soporte de aplicaciones a usuarios finales y otros grupos de soporte.",
+        "Ejecución de planes de testing funcional y de regresión para nuevas versiones de software.",
+        "Creación y mantenimiento de la base de conocimiento para la resolución de incidencias comunes.",
+        "Seguimiento de SLAs y métricas de resolución de tickets en herramientas de ticketing."
+      ]
+    },
+    {
+      "id": 7,
+      "role": "Técnico de Sistemas",
+      "company": "Omega CRM Consulting",
+      "period": "2008 - 2009",
+      "technologies": ["Windows Server", "Debian", "Hyper-V", "Virtual Server 2005", "ServiceDesk", "Scripting"],
+      "description": [
+        "Soporte técnico a usuario final y gestión del departamento de sistemas.",
+        "Estudio, implantación y mantenimiento de sistemas ServiceDesk para la gestión de SLAs e incidencias.",
+        "Administración de servidores Windows Server y Debian.",
+        "Gestión de políticas de backup y recuperación de datos.",
+        "Formación a usuarios en nuevas herramientas y procedimientos de TI."
+      ]
+    }
+  ]
+}

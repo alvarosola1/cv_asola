@@ -1,0 +1,8 @@
+# Archivo de configuración local con la API Key. ¡NO SUBIR A GITHUB!
+config.js
+
+# Archivos de dependencias de Node.js
+node_modules/
+
+# Archivos de entorno
+.env
