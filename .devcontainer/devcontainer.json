@@ -1,0 +1,19 @@
+{
+  "name": "CV Interactivo Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "forwardPorts": [5500],
+  "postCreateCommand": "echo 'Contenedor listo. ¡Usa Live Server para lanzar el index.html!'"
+}
