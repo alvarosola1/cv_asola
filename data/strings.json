@@ -12,5 +12,6 @@
   "contactTitle": "Contacto",
   "contactInfo": "alvaro.sola.martinez@gmail.com | 649 807 281",
   "githubSectionTitle": "¿Cómo está hecho esto?",
-  "githubSectionText": "Este CV es un proyecto vivo. Entra al repositorio, mira las tripas y descubre cómo funciona."
+  "githubSectionText": "Este CV es un proyecto vivo. Entra al repositorio, mira las tripas y descubre cómo funciona.",
+  "aiSectionTitle": "Funciones con IA (Gemini)"
 }
