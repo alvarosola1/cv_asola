@@ -1,4 +1,7 @@
 name: 'Revisión de PR con IA'
+permissions:
+  pull-requests: write
+  issues: write
 
 on:
   pull_request:
@@ -21,7 +24,9 @@ jobs:
         id: diff
         run: |
           git diff origin/${{ github.base_ref }} > pr.diff
-          echo "DIFF_CONTENT=$(cat pr.diff)" >> $GITHUB_ENV
+          echo "DIFF_CONTENT<<EOF" >> $GITHUB_ENV
+          cat pr.diff >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: 'Llamar a la API de Gemini para revisión (simulado)'
         id: gemini_review
