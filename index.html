@@ -118,10 +118,19 @@
                              <div id="timeline" class="space-y-4"></div>
                         </div>
                         <div id="details-panel" class="md:col-span-3 bg-gray-50 p-6 rounded-xl border min-h-[300px]">
-                            <h3 id="details-title" class="text-2xl font-bold text-[#004E89] mb-2"></h3>
-                            <p id="details-subtitle" class="text-md text-[#0077B6] font-semibold mb-4"></p>
-                            <div id="details-content" class="space-y-2 text-gray-700"></div>
-                            <div id="gemini-buttons" class="mt-6 pt-4 border-t space-y-2"></div>
+                            <div id="details-content">
+                                <h3 id="details-title" class="text-2xl font-bold text-[#004E89] mb-2"></h3>
+                                <p id="details-subtitle" class="text-md text-[#0077B6] font-semibold mb-4"></p>
+                                <div id="details-responsibilities" class="space-y-2 text-gray-700"></div>
+                            </div>
+                            
+                            <!-- AI Section -->
+                            <div id="ai-section" class="mt-6 pt-4 border-t border-blue-200 bg-blue-50/50 p-4 rounded-lg">
+                                <h4 id="ai-section-title" class="text-md font-bold text-[#004E89] mb-3 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                </h4>
+                                <div id="gemini-buttons" class="space-y-2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,17 +154,10 @@
     <script>
         let activeJobId = 1;
 
-        const timelineContainer = document.getElementById('timeline');
-        const detailsTitle = document.getElementById('details-title');
-        const detailsSubtitle = document.getElementById('details-subtitle');
-        const detailsContent = document.getElementById('details-content');
-        const geminiButtonsContainer = document.getElementById('gemini-buttons');
-        const modal = document.getElementById('gemini-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.getElementById('modal-body');
-        const downloadPdfBtn = document.getElementById('download-pdf-btn');
-        const closeModalBtn = document.getElementById('close-modal');
-        const educationCertificationsContainer = document.getElementById('education-certifications').querySelector('.space-y-3');
+        // --- Declaración de variables globales (sin asignación) ---
+        let timelineContainer, detailsTitle, detailsSubtitle, detailsResponsibilities, 
+            geminiButtonsContainer, modal, modalTitle, modalBody, 
+            downloadPdfBtn, closeModalBtn, educationCertificationsContainer;
 
         async function callGeminiApi(prompt, retries = 3, delay = 1000) {
             const apiKey = typeof GEMINI_API_KEY !== 'undefined' ? GEMINI_API_KEY : '';
@@ -266,13 +268,6 @@
             modalBody.innerHTML = `<div class="text-gray-700 space-y-4">${shouldFormat ? formatApiResponse(content) : content}</div>`;
         }
         
-        closeModalBtn.onclick = () => modal.style.display = "none";
-        window.onclick = (event) => {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        
         function loadImageAsBase64(url) {
             return new Promise((resolve, reject) => {
                 fetch(url)
@@ -322,9 +317,8 @@
                 
                 let headerMaxY = y;
                 if (profileImageBase64) {
-                    // --- Ajuste de la imagen ---
-                    const imgWidth = 25; // Más estrecha
-                    const imgHeight = 30; // Mantenemos la altura
+                    const imgWidth = 25;
+                    const imgHeight = 30;
                     const imgX = PAGE_WIDTH - MARGIN - imgWidth;
                     const imgY = MARGIN;
                     doc.addImage(profileImageBase64, 'JPEG', imgX, imgY, imgWidth, imgHeight);
@@ -441,13 +435,13 @@
                 { text: '✨ Sugerir Preguntas de Entrevista', handler: () => handleInterviewQuestions(jobId, cvData) },
                 { text: '✨ Resumir para Manager', handler: () => handleManagerSummary(jobId, cvData) },
                 { text: '✨ Redactar Email de Contacto', handler: () => handleContactEmail(jobId, cvData) },
-                { text: '🤖 Analizar Nueva Habilidad', handler: () => handleAnalyzeSkill(cvData) }
+                { text: '🤖 Analizar Habilidad', handler: () => handleAnalyzeSkill(cvData) }
             ];
 
             buttons.forEach(btnInfo => {
                  const button = document.createElement('button');
                 button.innerHTML = btnInfo.text;
-                button.className = 'bg-[#004E89] text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-[#0077B6] transition-colors text-sm';
+                button.className = 'bg-white text-[#004E89] border border-blue-300 font-bold py-2 px-4 rounded-lg w-full hover:bg-blue-100 transition-colors text-sm';
                 button.onclick = btnInfo.handler;
                 geminiButtonsContainer.appendChild(button);
             });
@@ -513,7 +507,7 @@
             activeJobId = jobId;
             detailsTitle.textContent = job.role;
             detailsSubtitle.textContent = `${job.company} | ${job.period}`;
-            detailsContent.innerHTML = `
+            detailsResponsibilities.innerHTML = `
                 <p class="font-semibold mb-3">Responsabilidades y Logros:</p>
                 <ul class="list-disc list-inside space-y-2 mb-4">
                     ${job.description.map(d => `<li>${d}</li>`).join('')}
@@ -561,9 +555,23 @@
             document.getElementById('contact-info').textContent = strings.contactInfo;
             document.getElementById('github-title').textContent = strings.githubSectionTitle;
             document.getElementById('github-text').textContent = strings.githubSectionText;
+            document.getElementById('ai-section-title').insertAdjacentText('beforeend', strings.aiSectionTitle);
         }
 
         async function main() {
+            // --- Asignación de variables de elementos del DOM ---
+            timelineContainer = document.getElementById('timeline');
+            detailsTitle = document.getElementById('details-title');
+            detailsSubtitle = document.getElementById('details-subtitle');
+            detailsResponsibilities = document.getElementById('details-responsibilities');
+            geminiButtonsContainer = document.getElementById('gemini-buttons');
+            modal = document.getElementById('gemini-modal');
+            modalTitle = document.getElementById('modal-title');
+            modalBody = document.getElementById('modal-body');
+            downloadPdfBtn = document.getElementById('download-pdf-btn');
+            closeModalBtn = document.getElementById('close-modal');
+            educationCertificationsContainer = document.getElementById('education-certifications').querySelector('.space-y-3');
+
             try {
                 const [cvResponse, stringsResponse] = await Promise.all([
                     fetch('./data/cvData.json'),
@@ -582,8 +590,15 @@
                 renderDetails(1, cvData);
                 renderEducationAndCerts(cvData);
                 
+                // --- Asignación de Event Listeners ---
                 timelineContainer.addEventListener('click', (e) => handleTimelineClick(e, cvData));
                 downloadPdfBtn.addEventListener('click', () => generatePdf(cvData));
+                closeModalBtn.onclick = () => modal.style.display = "none";
+                window.onclick = (event) => {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
 
             } catch (error) {
                 console.error("Error al cargar los datos:", error);
