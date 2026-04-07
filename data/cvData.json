@@ -30,11 +30,10 @@
       "period": "Mar 2024 - Actualidad",
       "technologies": ["Azure", "Terraform", "Ansible", "Grafana", "Elastic Stack", "GitHub Actions", "CI/CD", "FinOps"],
       "description": [
-        "Diseño de soluciones de arquitectura cloud y on-premise para el equipo de plataforma, garantizando escalabilidad y alta disponibilidad.",
-        "Liderazgo en la implementación de automatizaciones con GitHub Actions, Terraform y Ansible (CI/CD).",
-        "Definición de políticas de seguridad y gobierno cloud usando Infrastructure as Code (IaC).",
-        "Gestión de la observabilidad de plataformas con Grafana y Elastic Stack para la monitorización proactiva.",
-        "Optimización de costes (FinOps) y análisis de consumo de recursos en Microsoft Azure."
+        "Gestión integral de la demanda tecnológica: desde el análisis de requisitos hasta el diseño de la arquitectura en Azure, actuando como pieza clave dentro del equipo de soluciones.",
+        "Desarrollo hands-on de Infraestructura como Código (IaC) y creación de workflows complejos de CI/CD utilizando Terraform, Ansible y GitHub Actions.",
+        "Investigación e innovación tecnológica mediante el diseño y ejecución de Pruebas de Concepto (PoCs), destacando la integración de GitHub Copilot y el uso de agentes de IA.",
+        "Diseño y despliegue de arquitecturas cloud nativas en Azure, aplicando conocimientos de orquestación de contenedores con Kubernetes."
       ]
     },
     {
